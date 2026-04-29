@@ -1,1795 +1,940 @@
-<html>
-        <head><title>Downloaded HTML</title></head>
-        <body>
-            <pre style="white-space: pre-wrap; word-wrap: break-word;"><!DOCTYPE html>
-
+<!DOCTYPE html>
 
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Revenue Leak Calculator — Chaos to Clarity</title>
-
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
 <style>
-
   :root {
-
     --forest: #1B4332;
-
     --moss:   #2D6A4F;
-
     --sage:   #52B788;
-
     --mist:   #B7E4C7;
-
     --gold:   #C8930A;
-
     --red:    #B91C1C;
-
     --text:   #111827;
-
     --mid:    #6B7280;
-
     --border: #E5E7EB;
-
     --white:  #FFFFFF;
-
     --light:  #F9FAFB;
-
   }
-
   * { box-sizing: border-box; margin: 0; padding: 0; }
-
   body {
-
     font-family: 'DM Sans', sans-serif;
-
     background: #F4F7F5;
-
-    color: var(--text);
-
+    color: #111827;
     min-height: 100vh;
-
     -webkit-font-smoothing: antialiased;
-
   }
-
 
 /* HERO */
-
 .hero {
-
-background: var(–forest);
-
+background: #1B4332 !important;
 padding: 40px 24px 32px;
-
 text-align: center;
-
 }
-
 .hero-tag {
-
 display: inline-block;
-
 background: rgba(255,255,255,0.12);
-
-color: var(–mist);
-
+color: #B7E4C7;
 font-size: 11px;
-
 font-weight: 600;
-
 letter-spacing: 2px;
-
 text-transform: uppercase;
-
 padding: 5px 14px;
-
 border-radius: 20px;
-
 margin-bottom: 16px;
-
 }
-
 .hero h1 {
-
 font-family: ‘Playfair Display’, serif;
-
 font-size: 30px;
-
-color: #fff;
-
+color: #ffffff !important;
 line-height: 1.2;
-
 margin-bottom: 12px;
-
 }
-
 .hero h1 em { color: #FCD34D; font-style: italic; }
-
 .hero p {
-
-color: rgba(255,255,255,0.75);
-
+color: rgba(255,255,255,0.85) !important;
 font-size: 15px;
-
 line-height: 1.6;
-
 max-width: 320px;
-
 margin: 0 auto 20px;
-
 }
-
 .hero-badge {
-
 display: inline-flex;
-
 align-items: center;
-
 gap: 8px;
-
 background: rgba(255,255,255,0.1);
-
 border: 1px solid rgba(255,255,255,0.2);
-
 color: rgba(255,255,255,0.85);
-
 font-size: 13px;
-
 padding: 7px 16px;
-
 border-radius: 20px;
-
 }
-
 .hero-badge strong { color: #FCD34D; }
 
-
 /* PROGRESS */
-
 .progress-wrap {
-
-background: var(–forest);
-
+background: #1B4332 !important;
 padding: 4px 24px 20px;
-
 }
-
 .prog-track {
-
 background: rgba(255,255,255,0.15);
-
 border-radius: 99px;
-
 height: 5px;
-
 overflow: hidden;
-
 }
-
 .prog-fill {
-
 height: 100%;
-
-background: linear-gradient(90deg, var(–sage), #FCD34D);
-
+background: linear-gradient(90deg, #52B788, #FCD34D);
 border-radius: 99px;
-
 width: 0%;
-
 transition: width 0.5s cubic-bezier(.4,0,.2,1);
-
 }
-
 .prog-labels {
-
 display: flex;
-
 justify-content: space-between;
-
 margin-top: 7px;
-
 font-size: 11px;
-
 color: rgba(255,255,255,0.5);
-
 }
-
 
 /* CARD */
-
 .card {
-
-background: var(–white);
-
+background: #FFFFFF !important;
 border-radius: 20px;
-
 padding: 24px 20px;
-
 margin: 20px 16px 0;
-
 box-shadow: 0 1px 3px rgba(0,0,0,0.07), 0 4px 16px rgba(0,0,0,0.05);
-
 }
-
 .section-eyebrow {
-
 font-size: 10px;
-
 font-weight: 700;
-
 letter-spacing: 2.5px;
-
 text-transform: uppercase;
-
-color: var(–moss);
-
+color: #2D6A4F;
 margin-bottom: 4px;
-
 }
-
 .section-title {
-
 font-family: ‘Playfair Display’, serif;
-
 font-size: 22px;
-
-color: var(–forest);
-
+color: #1B4332;
 margin-bottom: 6px;
-
 line-height: 1.2;
-
 }
-
 .section-desc {
-
 font-size: 13px;
-
-color: var(–mid);
-
+color: #6B7280;
 line-height: 1.55;
-
 margin-bottom: 22px;
-
 padding-bottom: 18px;
-
-border-bottom: 1px solid var(–border);
-
+border-bottom: 1px solid #E5E7EB;
 }
-
 
 /* FIELDS */
-
 .field { margin-bottom: 18px; }
-
 .field-label {
-
 display: block;
-
 font-size: 13px;
-
 font-weight: 600;
-
-color: var(–text);
-
+color: #111827;
 margin-bottom: 4px;
-
 line-height: 1.4;
-
 }
-
 .field-hint {
-
 font-size: 11px;
-
-color: var(–mid);
-
+color: #6B7280;
 margin-bottom: 8px;
-
 line-height: 1.4;
-
 }
-
 .inp-wrap { position: relative; }
-
 .inp-pre {
-
 position: absolute;
-
 left: 14px; top: 50%;
-
 transform: translateY(-50%);
-
-font-size: 15px; color: var(–mid);
-
+font-size: 15px; color: #6B7280;
 pointer-events: none; font-weight: 500;
-
 }
-
 .inp-suf {
-
 position: absolute;
-
 right: 14px; top: 50%;
-
 transform: translateY(-50%);
-
-font-size: 13px; color: var(–mid);
-
+font-size: 13px; color: #6B7280;
 pointer-events: none;
-
 }
-
 input[type=“number”] {
-
 width: 100%;
-
 padding: 13px 14px;
-
-border: 1.5px solid var(–border);
-
+border: 1.5px solid #E5E7EB;
 border-radius: 12px;
-
 font-family: ‘DM Sans’, sans-serif;
-
 font-size: 16px;
-
-color: var(–text);
-
-background: var(–white);
-
+color: #111827;
+background: #FFFFFF;
 outline: none;
-
 transition: border-color 0.18s, box-shadow 0.18s;
-
 -webkit-appearance: none;
-
 }
-
 input[type=“number”]:focus {
-
-border-color: var(–sage);
-
+border-color: #52B788;
 box-shadow: 0 0 0 3px rgba(82,183,136,0.12);
-
 }
-
 .has-pre input { padding-left: 30px; }
-
 .has-suf input { padding-right: 36px; }
 
-
 .tog-group { display: flex; gap: 8px; }
-
 .tog-btn {
-
 flex: 1;
-
 padding: 11px 8px;
-
-border: 1.5px solid var(–border);
-
+border: 1.5px solid #E5E7EB;
 border-radius: 12px;
-
-background: var(–white);
-
+background: #FFFFFF;
 font-family: ‘DM Sans’, sans-serif;
-
 font-size: 14px;
-
 font-weight: 500;
-
-color: var(–mid);
-
+color: #6B7280;
 cursor: pointer;
-
 transition: all 0.18s;
-
 text-align: center;
-
 }
-
-.tog-btn:hover { border-color: var(–sage); color: var(–forest); }
-
+.tog-btn:hover { border-color: #52B788; color: #1B4332; }
 .tog-btn.on {
-
-border-color: var(–moss);
-
-background: var(–moss);
-
+border-color: #2D6A4F;
+background: #2D6A4F;
 color: #fff;
-
 font-weight: 600;
-
 }
-
 
 .btn-next {
-
 width: 100%;
-
 padding: 15px;
-
-background: var(–forest);
-
+background: #1B4332;
 color: #fff;
-
 border: none;
-
 border-radius: 14px;
-
 font-family: ‘DM Sans’, sans-serif;
-
 font-size: 16px;
-
 font-weight: 700;
-
 cursor: pointer;
-
 margin-top: 6px;
-
 transition: background 0.18s, transform 0.1s;
-
 display: flex;
-
 align-items: center;
-
 justify-content: center;
-
 gap: 8px;
-
 }
-
 .btn-next:active { transform: scale(0.98); }
-
-.btn-next:hover { background: var(–moss); }
-
+.btn-next:hover { background: #2D6A4F; }
 
 /* STEPS */
-
 .step { display: none; }
-
 .step.active { display: block; animation: fadeUp 0.35s ease both; }
-
 @keyframes fadeUp {
-
 from { opacity:0; transform:translateY(14px); }
-
 to   { opacity:1; transform:translateY(0); }
-
 }
-
 
 /* RESULTS */
-
 #results { display: none; padding-bottom: 48px; }
-
 #results.active { display: block; animation: fadeUp 0.35s ease both; }
 
-
 .leak-hero {
-
-background: var(–forest);
-
+background: #1B4332;
 border-radius: 20px;
-
 margin: 20px 16px 0;
-
 padding: 28px 24px;
-
 text-align: center;
-
 }
-
 .leak-hero-label {
-
 font-size: 11px;
-
 letter-spacing: 2px;
-
 text-transform: uppercase;
-
 color: rgba(255,255,255,0.6);
-
 margin-bottom: 8px;
-
 }
-
 .leak-hero-amount {
-
 font-family: ‘Playfair Display’, serif;
-
 font-size: 56px;
-
 color: #FCD34D;
-
 line-height: 1;
-
 margin-bottom: 10px;
-
 }
-
 .leak-hero-tagline {
-
 font-size: 14px;
-
 color: rgba(255,255,255,0.7);
-
 line-height: 1.65;
-
 font-style: italic;
-
 margin-bottom: 14px;
-
 }
-
 .score-pill {
-
 display: inline-block;
-
 padding: 6px 14px;
-
 border-radius: 20px;
-
 font-size: 12px;
-
 font-weight: 600;
-
 }
-
 .score-pill.critical { background: rgba(185,28,28,0.3); color: #FCA5A5; }
-
 .score-pill.warning  { background: rgba(200,147,10,0.3); color: #FCD34D; }
-
-.score-pill.good     { background: rgba(82,183,136,0.3); color: var(–mist); }
-
+.score-pill.good     { background: rgba(82,183,136,0.3); color: #B7E4C7; }
 
 .score-msg-card {
-
-background: var(–white);
-
+background: #FFFFFF;
 border-radius: 16px;
-
 padding: 16px 20px;
-
 margin: 12px 16px 0;
-
-border-left: 4px solid var(–forest);
-
+border-left: 4px solid #1B4332;
 box-shadow: 0 1px 3px rgba(0,0,0,0.06);
-
 }
-
 .score-msg-card p {
-
 font-size: 14px;
-
-color: var(–text);
-
+color: #111827;
 line-height: 1.6;
-
 }
-
 
 .leaks-heading {
-
 font-family: ‘Playfair Display’, serif;
-
 font-size: 19px;
-
-color: var(–white);
-
+color: #FFFFFF;
 margin: 24px 16px 12px;
-
 }
-
 
 .leak-card {
-
-background: var(–white);
-
+background: #FFFFFF;
 border-radius: 16px;
-
 margin: 0 16px 10px;
-
 padding: 16px 18px;
-
-border-left: 4px solid var(–red);
-
+border-left: 4px solid #B91C1C;
 box-shadow: 0 1px 3px rgba(0,0,0,0.06);
-
 display: flex;
-
 justify-content: space-between;
-
 align-items: flex-start;
-
 gap: 12px;
-
 opacity: 0;
-
 transform: translateX(-8px);
-
 transition: opacity 0.4s ease, transform 0.4s ease;
-
 }
-
-.leak-card.fixed { border-left-color: var(–sage); opacity: 0.5; }
-
+.leak-card.fixed { border-left-color: #52B788; opacity: 0.5; }
 .leak-card.show  { opacity: 1; transform: translateX(0); }
-
 .leak-card.fixed.show { opacity: 0.5; }
-
 .lc-left { flex: 1; }
-
 .lc-num {
-
 font-size: 10px; font-weight: 700;
-
 letter-spacing: 1.5px; text-transform: uppercase;
-
-color: var(–red); margin-bottom: 3px;
-
+color: #B91C1C; margin-bottom: 3px;
 }
-
-.leak-card.fixed .lc-num { color: var(–moss); }
-
-.lc-title { font-size: 14px; font-weight: 700; color: var(–text); margin-bottom: 3px; line-height: 1.3; }
-
-.lc-desc  { font-size: 12px; color: var(–mid); line-height: 1.5; }
-
-.lc-amt   { font-family: ‘Playfair Display’, serif; font-size: 22px; font-weight: 700; color: var(–red); white-space: nowrap; }
-
-.leak-card.fixed .lc-amt { color: var(–moss); font-size: 16px; }
-
+.leak-card.fixed .lc-num { color: #2D6A4F; }
+.lc-title { font-size: 14px; font-weight: 700; color: #111827; margin-bottom: 3px; line-height: 1.3; }
+.lc-desc  { font-size: 12px; color: #6B7280; line-height: 1.5; }
+.lc-amt   { font-family: ‘Playfair Display’, serif; font-size: 22px; font-weight: 700; color: #B91C1C; white-space: nowrap; }
+.leak-card.fixed .lc-amt { color: #2D6A4F; font-size: 16px; }
 
 .roi-card {
-
 background: #F0FDF4;
-
 border: 1.5px solid #BBF7D0;
-
 border-radius: 16px;
-
 padding: 18px 20px;
-
 margin: 16px 16px 0;
-
 }
-
-.roi-eyebrow { font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(–moss); margin-bottom: 12px; }
-
+.roi-eyebrow { font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #2D6A4F; margin-bottom: 12px; }
 .roi-row { display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px solid #D1FAE5; font-size: 13px; }
-
 .roi-row:last-child { border-bottom: none; }
-
-.roi-lbl { color: var(–mid); }
-
-.roi-val { font-weight: 700; color: var(–forest); }
-
-.roi-val.big { font-size: 16px; color: var(–moss); }
-
+.roi-lbl { color: #6B7280; }
+.roi-val { font-weight: 700; color: #1B4332; }
+.roi-val.big { font-size: 16px; color: #2D6A4F; }
 
 .dscore-card {
-
-background: var(–white);
-
-border: 1.5px solid var(–border);
-
+background: #FFFFFF;
+border: 1.5px solid #E5E7EB;
 border-radius: 16px;
-
 padding: 18px 20px;
-
 margin: 12px 16px 0;
-
 text-align: center;
-
 }
-
-.dscore-eyebrow { font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(–mid); margin-bottom: 12px; }
-
+.dscore-eyebrow { font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #6B7280; margin-bottom: 12px; }
 .dscore-dots { display: flex; justify-content: center; gap: 10px; margin-bottom: 12px; }
-
-.ddot { width: 28px; height: 28px; border-radius: 50%; background: #F3F4F6; border: 2px solid var(–border); transition: all 0.35s ease; }
-
-.ddot.on { background: var(–sage); border-color: var(–sage); }
-
-.dscore-msg { font-size: 13px; color: var(–mid); line-height: 1.5; }
-
+.ddot { width: 28px; height: 28px; border-radius: 50%; background: #F3F4F6; border: 2px solid #E5E7EB; transition: all 0.35s ease; }
+.ddot.on { background: #52B788; border-color: #52B788; }
+.dscore-msg { font-size: 13px; color: #6B7280; line-height: 1.5; }
 
 /* CTA */
-
 .cta-block {
-
-background: var(–forest);
-
+background: #1B4332;
 border-radius: 20px;
-
 margin: 16px 16px 0;
-
 padding: 26px 22px;
-
 text-align: center;
-
 }
-
-.cta-eyebrow { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(–mist); margin-bottom: 8px; }
-
+.cta-eyebrow { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: #B7E4C7; margin-bottom: 8px; }
 .cta-title { font-family: ‘Playfair Display’, serif; font-size: 22px; color: #fff; line-height: 1.25; margin-bottom: 6px; }
-
 .cta-title span { color: #FCD34D; }
-
 .cta-subtitle { font-size: 13px; color: rgba(255,255,255,0.65); line-height: 1.55; margin-bottom: 20px; font-style: italic; }
 
-
 .btn-primary {
-
 display: block;
-
 width: 100%;
-
 padding: 15px 16px;
-
-background: var(–gold);
-
+background: #C8930A;
 color: #fff;
-
 border: none;
-
 border-radius: 14px;
-
 font-family: ‘DM Sans’, sans-serif;
-
 font-size: 15px;
-
 font-weight: 700;
-
 cursor: pointer;
-
 text-decoration: none;
-
 transition: background 0.18s, transform 0.1s;
-
 line-height: 1.35;
-
 }
-
 .btn-primary:active { transform: scale(0.98); }
-
 .btn-primary small { display: block; font-size: 11px; font-weight: 400; opacity: 0.85; margin-top: 2px; }
 
-
-.urgency-line { font-size: 11px; color: var(–mist); margin: 8px 0 16px; font-style: italic; }
-
+.urgency-line { font-size: 11px; color: #B7E4C7; margin: 8px 0 16px; font-style: italic; }
 
 .cta-divider { display: flex; align-items: center; gap: 10px; margin: 4px 0 14px; }
-
 .cta-divider::before, .cta-divider::after { content: ‘’; flex: 1; height: 1px; background: rgba(255,255,255,0.15); }
-
 .cta-divider span { font-size: 11px; color: rgba(255,255,255,0.4); white-space: nowrap; }
 
-
 .email-label { font-size: 12px; color: rgba(255,255,255,0.6); margin-bottom: 10px; line-height: 1.45; text-align: left; }
-
 .email-wrap { display: flex; gap: 8px; }
-
 .email-wrap input[type=“email”] {
-
 flex: 1;
-
 padding: 12px 14px;
-
 border: 1.5px solid rgba(255,255,255,0.2);
-
 border-radius: 12px;
-
 font-family: ‘DM Sans’, sans-serif;
-
 font-size: 14px;
-
 color: #fff;
-
 background: rgba(255,255,255,0.1);
-
 outline: none;
-
 transition: border-color 0.18s;
-
 -webkit-appearance: none;
-
 }
-
 .email-wrap input::placeholder { color: rgba(255,255,255,0.4); }
-
-.email-wrap input:focus { border-color: var(–sage); }
-
+.email-wrap input:focus { border-color: #52B788; }
 .btn-email {
-
 padding: 12px 16px;
-
 background: rgba(255,255,255,0.15);
-
 border: 1.5px solid rgba(255,255,255,0.25);
-
 border-radius: 12px;
-
 font-family: ‘DM Sans’, sans-serif;
-
 font-size: 13px; font-weight: 600;
-
 color: #fff; cursor: pointer;
-
 white-space: nowrap;
-
 transition: all 0.18s;
-
 }
-
 .btn-email:hover { background: rgba(255,255,255,0.22); }
 
-
 .email-success {
-
 display: none;
-
 background: rgba(82,183,136,0.2);
-
 border: 1px solid rgba(82,183,136,0.3);
-
 border-radius: 10px;
-
 padding: 10px 14px;
-
 font-size: 13px;
-
-color: var(–mist);
-
+color: #B7E4C7;
 text-align: center;
-
 margin-top: 8px;
-
 }
-
 
 .ladder-hint {
-
 margin-top: 16px;
-
 padding-top: 14px;
-
 border-top: 1px solid rgba(255,255,255,0.12);
-
 font-size: 12px;
-
 color: rgba(255,255,255,0.45);
-
 }
-
 .ladder-hint a { color: rgba(255,255,255,0.7); text-decoration: underline; cursor: pointer; }
-
 
 .cta-guarantee { font-size: 11px; color: rgba(255,255,255,0.35); margin-top: 14px; line-height: 1.6; }
 
-
 .btn-restart {
-
 display: flex;
-
 align-items: center;
-
 justify-content: center;
-
 gap: 6px;
-
 width: calc(100% - 32px);
-
 margin: 12px 16px 0;
-
 padding: 13px;
-
-background: var(–white);
-
-color: var(–mid);
-
-border: 1.5px solid var(–border);
-
+background: #FFFFFF;
+color: #6B7280;
+border: 1.5px solid #E5E7EB;
 border-radius: 14px;
-
 font-family: ‘DM Sans’, sans-serif;
-
 font-size: 14px;
-
 cursor: pointer;
-
 transition: all 0.18s;
-
 }
-
-.btn-restart:hover { border-color: var(–moss); color: var(–forest); }
-
+.btn-restart:hover { border-color: #2D6A4F; color: #1B4332; }
 
 @media (max-width: 360px) {
-
 .hero h1 { font-size: 26px; }
-
 .leak-hero-amount { font-size: 44px; }
-
 }
-
 </style>
 
-
 </head>
-
 <body>
 
-
 <div class="hero">
-
   <div class="hero-tag">Free Tool · Chaos to Clarity</div>
-
   <h1>How much is your business <em>leaking</em> every year?</h1>
-
   <p>Answer 9 honest questions. See your exact revenue leak — and where it's coming from.</p>
-
   <div class="hero-badge">⏱ Takes <strong>3 minutes</strong> &nbsp;·&nbsp; 100% free</div>
-
 </div>
-
 
 <div class="progress-wrap">
-
   <div class="prog-track"><div class="prog-fill" id="progFill"></div></div>
-
   <div class="prog-labels">
-
     <span id="progText">Step 1 of 3</span>
-
     <span id="progPct">0%</span>
-
   </div>
-
 </div>
-
 
 <!-- STEP A -->
 
-
 <div class="step active" id="stepA">
-
   <div class="card">
-
     <div class="section-eyebrow">Section A</div>
-
     <div class="section-title">Your Business Basics</div>
-
     <div class="section-desc">Be honest — these numbers drive your results. Rough estimates are fine.</div>
 
-
 ```
-
 <div class="field">
-
   <label class="field-label">How many people visit or contact your business per week?</label>
-
   <div class="field-hint">Count enquiries and browsers, not just buyers</div>
-
   <input type="number" id="visitors" placeholder="e.g. 150" inputmode="numeric" min="0">
-
 </div>
 
-
 <div class="field">
-
   <label class="field-label">What's your average sale per paying customer?</label>
-
   <div class="field-hint">Total weekly revenue ÷ number of transactions</div>
-
   <div class="inp-wrap has-pre">
-
     <span class="inp-pre">$</span>
-
     <input type="number" id="avgSale" placeholder="e.g. 45" inputmode="decimal" min="0">
-
   </div>
-
 </div>
 
-
 <div class="field">
-
   <label class="field-label">What % of visitors actually buy or book?</label>
-
   <div class="field-hint">Most small businesses are 20–40%</div>
-
   <div class="inp-wrap has-suf">
-
     <input type="number" id="convRate" placeholder="e.g. 25" inputmode="numeric" min="1" max="100">
-
     <span class="inp-suf">%</span>
-
   </div>
-
 </div>
-
 
 <div class="field">
-
   <label class="field-label">How many weeks per year is your business fully active?</label>
-
   <div class="field-hint">Year-round = 52 · Seasonal = 16–30</div>
-
   <input type="number" id="activeWeeks" placeholder="e.g. 48" inputmode="numeric" min="1" max="52">
-
 </div>
-
 
 <button class="btn-next" onclick="goTo('stepA','stepB',2)">Continue →</button>
-
 ```
 
-
   </div>
-
 </div>
-
 
 <!-- STEP B -->
 
-
 <div class="step" id="stepB">
-
   <div class="card">
-
     <div class="section-eyebrow">Section B</div>
-
     <div class="section-title">Your Revenue Systems</div>
-
     <div class="section-desc">Most businesses score 0 or 1 here. No judgment — this is exactly where the leaks live.</div>
 
-
 ```
-
 <div class="field">
-
   <label class="field-label">Do you actively collect customer contact info?</label>
-
   <div class="field-hint">Email, phone, social follow — any method counts</div>
-
   <div class="tog-group">
-
     <button class="tog-btn" onclick="tog(this,'hasContacts',1)">Yes ✓</button>
-
     <button class="tog-btn" onclick="tog(this,'hasContacts',0)">No ✗</button>
-
   </div>
-
   <input type="hidden" id="hasContacts" value="">
-
 </div>
 
-
 <div class="field">
-
   <label class="field-label">Do you send regular updates or offers to past customers?</label>
-
   <div class="field-hint">Email, text, or social — at least twice a month</div>
-
   <div class="tog-group">
-
     <button class="tog-btn" onclick="tog(this,'hasUpdates',1)">Yes ✓</button>
-
     <button class="tog-btn" onclick="tog(this,'hasUpdates',0)">No ✗</button>
-
   </div>
-
   <input type="hidden" id="hasUpdates" value="">
-
 </div>
 
-
 <div class="field">
-
   <label class="field-label">Can customers buy from you when you're not physically available?</label>
-
   <div class="field-hint">Online store, booking link, order form, etc.</div>
-
   <div class="tog-group">
-
     <button class="tog-btn" onclick="tog(this,'hasOnline',1)">Yes ✓</button>
-
     <button class="tog-btn" onclick="tog(this,'hasOnline',0)">No ✗</button>
-
   </div>
-
   <input type="hidden" id="hasOnline" value="">
-
 </div>
 
-
 <div class="field">
-
   <label class="field-label">Do you generate revenue during your slow season or off-hours?</label>
-
   <div class="field-hint">Packages, gift boxes, retainers, subscriptions, etc.</div>
-
   <div class="tog-group">
-
     <button class="tog-btn" onclick="tog(this,'hasOffSeason',1)">Yes ✓</button>
-
     <button class="tog-btn" onclick="tog(this,'hasOffSeason',0)">No ✗</button>
-
   </div>
-
   <input type="hidden" id="hasOffSeason" value="">
-
 </div>
-
 
 <div class="field">
-
   <label class="field-label">Do you post consistently on social media at least 2–3 times per week?</label>
-
   <div class="field-hint">Instagram, Facebook, TikTok — whichever platform your customers use most</div>
-
   <div class="tog-group">
-
     <button class="tog-btn" onclick="tog(this,'hasSocial',1)">Yes ✓</button>
-
     <button class="tog-btn" onclick="tog(this,'hasSocial',0)">No ✗</button>
-
   </div>
-
   <input type="hidden" id="hasSocial" value="">
-
 </div>
-
 
 <button class="btn-next" onclick="goTo('stepB',null,3)">See My Revenue Leak →</button>
-
 ```
 
-
   </div>
-
 </div>
-
 
 <!-- RESULTS -->
 
-
 <div id="results">
 
-
   <div class="leak-hero">
-
     <div class="leak-hero-label">Your Annual Revenue Leak</div>
-
     <div class="leak-hero-amount" id="totalAmt">$0</div>
-
     <div class="leak-hero-tagline">"The calculator shows you how much.<br>The toolkit shows you exactly where."</div>
-
     <span class="score-pill critical" id="scorePill">🔴 Critical — leaks every week</span>
-
   </div>
-
 
   <div class="score-msg-card">
-
     <p id="scoreMsg">Loading your results...</p>
-
   </div>
-
 
   <div class="leaks-heading">Where it's leaking from:</div>
 
-
   <div class="leak-card" id="lc1">
-
     <div class="lc-left">
-
       <div class="lc-num" id="lc1num">Leak 1</div>
-
       <div class="lc-title">No customer contact collection</div>
-
       <div class="lc-desc">People who interact with your business and disappear. If just 5% signed up and bought once — this is what you'd recover.</div>
-
     </div>
-
     <div class="lc-amt" id="lamt1">$0</div>
-
   </div>
-
 
   <div class="leak-card" id="lc2">
-
     <div class="lc-left">
-
       <div class="lc-num" id="lc2num">Leak 2</div>
-
       <div class="lc-title">No regular follow-up with past customers</div>
-
       <div class="lc-desc">Businesses that follow up consistently see ~20% more repeat purchases. This is your lost repeat revenue.</div>
-
     </div>
-
     <div class="lc-amt" id="lamt2">$0</div>
-
   </div>
-
 
   <div class="leak-card" id="lc3">
-
     <div class="lc-left">
-
       <div class="lc-num" id="lc3num">Leak 3</div>
-
       <div class="lc-title">No way to buy when you're not open</div>
-
       <div class="lc-desc">30% of customers would buy again between visits if they could. This is that missed revenue.</div>
-
     </div>
-
     <div class="lc-amt" id="lamt3">$0</div>
-
   </div>
-
 
   <div class="leak-card" id="lc4">
-
     <div class="lc-left">
-
       <div class="lc-num" id="lc4num">Leak 4</div>
-
       <div class="lc-title">No slow-season or off-hours revenue</div>
-
       <div class="lc-desc">15% of active customers would buy a package or gift option in your quiet months. This is what that's worth across 16 slow weeks.</div>
-
     </div>
-
     <div class="lc-amt" id="lamt4">$0</div>
-
   </div>
-
 
   <div class="leak-card" id="lc5">
-
     <div class="lc-left">
-
       <div class="lc-num" id="lc5num">Leak 5</div>
-
       <div class="lc-title">Inconsistent social media presence</div>
-
       <div class="lc-desc">Businesses that post consistently 2–3x per week attract ~25% more new visitors. This is the new customer revenue you're not reaching.</div>
-
     </div>
-
     <div class="lc-amt" id="lamt5">$0</div>
-
   </div>
-
 
   <div class="roi-card">
-
     <div class="roi-eyebrow">The Toolkit ROI — fixing even one leak pays for itself</div>
-
     <div class="roi-row"><span class="roi-lbl">Cost of The Chaos Audit</span><span class="roi-val">$37</span></div>
-
     <div class="roi-row"><span class="roi-lbl">Your smallest single leak</span><span class="roi-val" id="roiSmallest">$0</span></div>
-
     <div class="roi-row"><span class="roi-lbl">Return on toolkit investment</span><span class="roi-val big" id="roiPct">0%</span></div>
-
     <div class="roi-row"><span class="roi-lbl">Weeks to recover the $37</span><span class="roi-val" id="roiWeeks">—</span></div>
-
   </div>
-
 
   <div class="dscore-card">
-
     <div class="dscore-eyebrow">Your Revenue System Score</div>
-
     <div class="dscore-dots">
-
       <div class="ddot" id="dd1"></div>
-
       <div class="ddot" id="dd2"></div>
-
       <div class="ddot" id="dd3"></div>
-
       <div class="ddot" id="dd4"></div>
-
       <div class="ddot" id="dd5"></div>
-
     </div>
-
     <div class="dscore-msg" id="dscoreMsg">Loading...</div>
-
   </div>
 
-
   <div class="cta-block">
-
     <div class="cta-eyebrow">Your Next Step</div>
-
     <div class="cta-title">Find exactly where your <span id="ctaAmt">$0</span> is coming from</div>
-
     <div class="cta-subtitle">The calculator shows the number. The Chaos Audit shows you which 3 things to fix first.</div>
 
-
 ```
-
 <a class="btn-primary" href="https://olhaclarity.kit.com/chaos-audit" target="_blank">
-
   Get The Chaos Audit — $37
-
   <small>Fillable PDF · Instant access · 20 minutes</small>
-
 </a>
-
 
 <div class="urgency-line">Most business owners find their biggest leak in the first 20 minutes.</div>
 
-
 <div class="cta-divider"><span>or</span></div>
 
-
 <div class="email-label">Not ready yet? Get the free Revenue Leak Guide delivered to your inbox.</div>
-
 <div class="email-wrap">
-
   <input type="email" id="emailInput" placeholder="your@email.com">
-
   <button class="btn-email" onclick="submitEmail()">Send it →</button>
-
 </div>
-
 <div class="email-success" id="emailSuccess">✓ You're in — check your inbox shortly.</div>
-
 <div style="font-size:10px;color:rgba(255,255,255,0.35);margin-top:6px;">You'll receive the free guide plus occasional tips from Olha. Unsubscribe anytime.</div>
 
-
 <div class="ladder-hint">
-
   Already have the toolkit? <a onclick="window.open('https://tidycal.com/olhaclarityaudit/chaos-to-clarity-diagnostic-report-no-call','_blank')">→ Book the $97 Clarity Report</a>
-
 </div>
-
 
 <div class="cta-guarantee">
-
   45-min Zoom available · Written action plan within 48 hrs<br>
-
   Full refund if you don't get 3 actionable fixes · Olha.ClarityAudit@gmail.com
-
 </div>
-
 ```
-
 
   </div>
 
-
 <button class="btn-restart" onclick="restart()">↺ Start over with different numbers</button>
-
 
 </div>
 
-
 <script>
-
   function setProg(s) {
-
     const pct = s >= 4 ? 100 : Math.round(((s-1)/3)*100);
-
     document.getElementById('progFill').style.width = pct + '%';
-
     document.getElementById('progText').textContent = s <= 3 ? 'Step '+s+' of 3' : 'Complete ✓';
-
     document.getElementById('progPct').textContent = pct + '%';
-
   }
-
 
   function tog(btn, id, val) {
-
     btn.parentElement.querySelectorAll('.tog-btn').forEach(b => b.classList.remove('on'));
-
     btn.classList.add('on');
-
     document.getElementById(id).value = val;
-
   }
-
 
   function goTo(from, to, nextStep) {
-
     if (from === 'stepA') {
-
       if (!document.getElementById('visitors').value  ||
-
           !document.getElementById('avgSale').value   ||
-
           !document.getElementById('convRate').value  ||
-
           !document.getElementById('activeWeeks').value) {
-
         alert('Please fill in all fields to continue.'); return;
-
       }
-
     }
-
     if (from === 'stepB') {
-
       const req = ['hasContacts','hasUpdates','hasOnline','hasOffSeason','hasSocial'];
-
       for (let r of req) {
-
         if (document.getElementById(r).value === '') {
-
           alert('Please answer all questions to see your results.'); return;
-
         }
-
       }
-
       document.getElementById(from).classList.remove('active');
-
       document.getElementById('results').style.display = 'block';
-
       document.getElementById('results').classList.add('active');
-
       setProg(4);
-
       buildResults();
-
       window.scrollTo({ top: 0, behavior: 'smooth' });
-
       return;
-
     }
-
     document.getElementById(from).classList.remove('active');
-
     document.getElementById(to).classList.add('active');
-
     setProg(nextStep);
-
     window.scrollTo({ top: 0, behavior: 'smooth' });
-
   }
-
 
   function buildResults() {
-
     const visitors    = +document.getElementById('visitors').value    || 0;
-
     const avgSale     = +document.getElementById('avgSale').value     || 0;
-
     const convRate    = (+document.getElementById('convRate').value   || 0) / 100;
-
     const activeWeeks = +document.getElementById('activeWeeks').value || 48;
-
     const hC  = +document.getElementById('hasContacts').value;
-
     const hU  = +document.getElementById('hasUpdates').value;
-
     const hO  = +document.getElementById('hasOnline').value;
-
     const hS  = +document.getElementById('hasOffSeason').value;
-
     const hSM = +document.getElementById('hasSocial').value;
 
-
     const buyers    = visitors * convRate;
-
     const nonBuyers = visitors * (1 - convRate);
-
     const weeklyRev = buyers * avgSale;
 
-
     const l1 = hC ===1 ? 0 : Math.round(nonBuyers * 0.05 * avgSale * activeWeeks);
-
     const l2 = hU ===1 ? 0 : Math.round(weeklyRev * 0.20 * activeWeeks);
-
     const l3 = hO ===1 ? 0 : Math.round(weeklyRev * 0.30 * activeWeeks);
-
     const l4 = hS ===1 ? 0 : Math.round(buyers * avgSale * 0.15 * 16);
-
     const l5 = hSM===1 ? 0 : Math.round(visitors * 0.25 * convRate * avgSale * activeWeeks);
-
     const total = l1 + l2 + l3 + l4 + l5;
 
-
     animCount('totalAmt', total, '$');
-
     document.getElementById('ctaAmt').textContent = '$' + total.toLocaleString();
 
-
     const leakData = [
-
       { id:'lc1', amtId:'lamt1', numId:'lc1num', val:l1, fixed:hC===1 },
-
       { id:'lc2', amtId:'lamt2', numId:'lc2num', val:l2, fixed:hU===1 },
-
       { id:'lc3', amtId:'lamt3', numId:'lc3num', val:l3, fixed:hO===1 },
-
       { id:'lc4', amtId:'lamt4', numId:'lc4num', val:l4, fixed:hS===1 },
-
       { id:'lc5', amtId:'lamt5', numId:'lc5num', val:l5, fixed:hSM===1 },
-
     ];
-
     leakData.forEach((ld, i) => {
-
       const card = document.getElementById(ld.id);
-
       document.getElementById(ld.amtId).textContent = ld.fixed ? '✓ Plugged' : '$'+ld.val.toLocaleString();
-
       if (ld.fixed) {
-
         card.classList.add('fixed');
-
         document.getElementById(ld.numId).textContent = 'Leak '+(i+1)+' — Already Plugged';
-
       }
-
       setTimeout(() => card.classList.add('show'), 300 + i*160);
-
     });
 
-
     const active = [l1,l2,l3,l4,l5].filter(l=>l>0);
-
     const smallest = active.length ? Math.min(...active) : 0;
-
     document.getElementById('roiSmallest').textContent = '$'+smallest.toLocaleString();
-
     document.getElementById('roiPct').textContent = smallest>0 ? Math.round((smallest/37)*100)+'%' : '0%';
-
     const wkLeak = activeWeeks>0 ? total/activeWeeks : 0;
-
     document.getElementById('roiWeeks').textContent = wkLeak>0 ? (37/wkLeak).toFixed(1)+' weeks' : '—';
 
-
     const annualRev = weeklyRev * activeWeeks;
-
     const ratio = annualRev>0 ? total/annualRev : 0;
-
     const pill = document.getElementById('scorePill');
-
     const msg  = document.getElementById('scoreMsg');
 
-
     if (ratio > 0.35 || (hC===0 && hU===0 && hO===0)) {
-
       pill.className = 'score-pill critical';
-
       pill.innerHTML = '🔴 Critical — major leaks every week';
-
       msg.textContent = "Your business is working harder than it should and capturing less than it could. The Chaos Audit will show you exactly which 3 things to fix first — so you stop losing revenue you've already earned.";
-
     } else if (ratio > 0.15 || total > 2000) {
-
       pill.className = 'score-pill warning';
-
       pill.innerHTML = '🟡 Fixable gaps — real money left on the table';
-
       msg.textContent = "You have some systems in place but there are clear gaps worth closing. The Chaos Audit pinpoints exactly where — most people fix their first leak within a week of completing it.";
-
     } else {
-
       pill.className = 'score-pill good';
-
       pill.innerHTML = '🟢 Good shape — hidden leaks worth finding';
-
       msg.textContent = "You're more set up than most. But even small leaks compound over a full year. The Chaos Audit will find what's hiding in the gaps — and confirm what's already working.";
-
     }
-
 
     const score = hC+hU+hO+hS+hSM;
-
     [hC,hU,hO,hS,hSM].forEach((v,i) => { if(v===1) document.getElementById('dd'+(i+1)).classList.add('on'); });
-
     const dMsgs = [
-
       '0 of 5 systems in place. Revenue leaking every single week.',
-
       '1 of 5 systems in place. Four gaps still costing you.',
-
       '2 of 5 systems in place. Getting started — real upside remains.',
-
       '3 of 5 systems in place. Halfway there — keep going.',
-
       '4 of 5 systems in place. One fix away from a strong foundation.',
-
       '5 of 5 systems in place. Fully set up — ready to scale.'
-
     ];
-
     document.getElementById('dscoreMsg').textContent = dMsgs[score];
-
   }
-
 
   function animCount(elId, target, prefix) {
-
     const el = document.getElementById(elId);
-
     const dur = 1200, start = performance.now();
-
     function tick(now) {
-
       const p = Math.min((now-start)/dur, 1);
-
       const e = 1-Math.pow(1-p,3);
-
       el.textContent = prefix + Math.round(e*target).toLocaleString();
-
       if (p<1) requestAnimationFrame(tick);
-
       else el.textContent = prefix+target.toLocaleString();
-
     }
-
     requestAnimationFrame(tick);
-
   }
 
-
   async function submitEmail() {
-
     const email = document.getElementById('emailInput').value.trim();
-
     if (!email || !email.includes('@')) {
-
       alert('Please enter a valid email address.');
-
       return;
-
     }
 
-
     const btn = document.querySelector('.btn-email');
-
     btn.textContent = 'Sending...';
-
     btn.disabled = true;
 
-
     // ── KIT (ConvertKit) CONFIGURATION ──────────────────────────────────────
-
     // Step 1: In Kit go to: Settings → Developer → API Keys → copy your Public API Key
-
     // Step 2: Create a Form in Kit called "Revenue Leak Guide" → copy the Form ID from the URL
-
     // Step 3: Replace the two placeholders below with your real values
-
     const KIT_API_KEY = '_B-FBWFGSaI0UcL1xuUJLQ';   // ← paste your Kit public API key here
-
     const KIT_FORM_ID = '9379967';           // ← paste your Kit form ID here (numbers only)
-
     // ────────────────────────────────────────────────────────────────────────
 
-
     try {
-
       const response = await fetch(
-
         `https://api.convertkit.com/v3/forms/${KIT_FORM_ID}/subscribe`,
-
         {
-
           method: 'POST',
-
           headers: { 'Content-Type': 'application/json' },
-
           body: JSON.stringify({
-
             api_key: KIT_API_KEY,
-
             email: email,
-
             fields: {
-
               source: 'Revenue Leak Calculator'
-
             }
-
           })
-
         }
-
       );
-
 
       const data = await response.json();
 
-
       if (response.ok && data.subscription) {
-
         document.getElementById('emailSuccess').style.display = 'block';
-
         document.getElementById('emailInput').value = '';
-
         btn.textContent = 'Sent ✓';
-
       } else {
-
         throw new Error(data.message || 'Subscription failed');
-
       }
-
     } catch (err) {
-
       console.error('Kit error:', err);
-
       // Fallback — show success anyway so user isn't confused
-
       // (remove this in production once confirmed working)
-
       document.getElementById('emailSuccess').style.display = 'block';
-
       document.getElementById('emailInput').value = '';
-
       btn.textContent = 'Sent ✓';
-
     }
-
   }
-
 
   function restart() {
-
     ['visitors','avgSale','convRate','activeWeeks'].forEach(id => document.getElementById(id).value='');
-
     ['hasContacts','hasUpdates','hasOnline','hasOffSeason','hasSocial'].forEach(id => document.getElementById(id).value='');
-
     document.querySelectorAll('.tog-btn').forEach(b=>b.classList.remove('on'));
-
     document.querySelectorAll('.ddot').forEach(d=>d.classList.remove('on'));
-
     document.querySelectorAll('.leak-card').forEach((c,i)=>{
-
       c.classList.remove('show','fixed');
-
       c.querySelector('.lc-num').textContent='Leak '+(i+1);
-
     });
-
     document.getElementById('emailSuccess').style.display='none';
-
     document.getElementById('results').style.display='none';
-
     document.getElementById('results').classList.remove('active');
-
     document.getElementById('stepB').classList.remove('active');
-
     document.getElementById('stepA').classList.add('active');
-
     setProg(1);
-
     window.scrollTo({top:0,behavior:'smooth'});
-
   }
 
-
   setProg(1);
-
 </script>
 
-
 </body>
-
-</html></pre>
-        </body>
-    </html>
+</html>
