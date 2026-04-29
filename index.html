@@ -134,7 +134,7 @@ border-bottom: 1px solid #E5E7EB;
 }
 
 /* FIELDS */
-.field { margin-bottom: 18px; }
+.field { margin-bottom: 20px; }
 .field-label {
 display: block;
 font-size: 13px;
@@ -166,7 +166,7 @@ pointer-events: none;
 }
 input[type=“number”] {
 width: 100%;
-padding: 13px 14px;
+padding: 16px 14px;
 border: 1.5px solid #E5E7EB;
 border-radius: 12px;
 font-family: ‘DM Sans’, sans-serif;
@@ -370,6 +370,25 @@ text-align: center;
 .cta-title { font-family: ‘Playfair Display’, serif; font-size: 22px; color: #fff; line-height: 1.25; margin-bottom: 6px; }
 .cta-title span { color: #FCD34D; }
 .cta-subtitle { font-size: 13px; color: rgba(255,255,255,0.65); line-height: 1.55; margin-bottom: 20px; font-style: italic; }
+
+.btn-guide {
+display: block;
+width: 100%;
+padding: 14px 16px;
+background: transparent;
+color: #B7E4C7;
+border: 1.5px solid rgba(255,255,255,0.25);
+border-radius: 14px;
+font-family: ‘DM Sans’, sans-serif;
+font-size: 15px;
+font-weight: 600;
+cursor: pointer;
+text-decoration: none;
+transition: all 0.18s;
+text-align: center;
+margin-top: 4px;
+}
+.btn-guide:hover { background: rgba(255,255,255,0.08); border-color: #B7E4C7; }
 
 .btn-primary {
 display: block;
@@ -690,7 +709,7 @@ transition: all 0.18s;
     <div class="cta-subtitle">The calculator shows the number. The Chaos Audit shows you which 3 things to fix first.</div>
 
 ```
-<a class="btn-primary" href="https://olhaclarity.kit.com/chaos-audit" target="_blank">
+<a class="btn-primary" href="https://olhaclarity.kit.com/products/the-chaos-audit" target="_blank">
   Get The Chaos Audit — $37
   <small>Fillable PDF · Instant access · 20 minutes</small>
 </a>
@@ -699,13 +718,10 @@ transition: all 0.18s;
 
 <div class="cta-divider"><span>or</span></div>
 
-<div class="email-label">Not ready yet? Get the free Revenue Leak Guide delivered to your inbox.</div>
-<div class="email-wrap">
-  <input type="email" id="emailInput" placeholder="your@email.com">
-  <button class="btn-email" onclick="submitEmail()">Send it →</button>
-</div>
-<div class="email-success" id="emailSuccess">✓ You're in — check your inbox shortly.</div>
-<div style="font-size:10px;color:rgba(255,255,255,0.35);margin-top:6px;">You'll receive the free guide plus occasional tips from Olha. Unsubscribe anytime.</div>
+<div class="email-label">Not ready yet? Get the free Revenue Leak Guide first.</div>
+<a class="btn-guide" href="https://checkout.mailerlite.com/checkout/17950" target="_blank">
+  Get the Free Revenue Leak Guide →
+</a>
 
 <div class="ladder-hint">
   Already have the toolkit? <a onclick="window.open('https://tidycal.com/olhaclarityaudit/chaos-to-clarity-diagnostic-report-no-call','_blank')">→ Book the $97 Clarity Report</a>
@@ -713,7 +729,7 @@ transition: all 0.18s;
 
 <div class="cta-guarantee">
   45-min Zoom available · Written action plan within 48 hrs<br>
-  Full refund if you don't get 3 actionable fixes · Olha.ClarityAudit@gmail.com
+  Full refund if you don't get 3 actionable fixes · olha@olhaclarity.com
 </div>
 ```
 
