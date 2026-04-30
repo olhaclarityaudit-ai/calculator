@@ -134,17 +134,17 @@ border-bottom: 1px solid #E5E7EB;
 }
 
 /* FIELDS */
-.field { margin-bottom: 20px; }
+.field { margin-bottom: 24px; }
 .field-label {
 display: block;
-font-size: 13px;
+font-size: 15px;
 font-weight: 600;
 color: #111827;
 margin-bottom: 4px;
 line-height: 1.4;
 }
 .field-hint {
-font-size: 11px;
+font-size: 13px;
 color: #6B7280;
 margin-bottom: 8px;
 line-height: 1.4;
@@ -152,16 +152,16 @@ line-height: 1.4;
 .inp-wrap { position: relative; }
 .inp-pre {
 position: absolute;
-left: 14px; top: 50%;
+left: 16px; top: 50%;
 transform: translateY(-50%);
-font-size: 15px; color: #6B7280;
+font-size: 18px; color: #6B7280;
 pointer-events: none; font-weight: 500;
 }
 .inp-suf {
 position: absolute;
-right: 14px; top: 50%;
+right: 16px; top: 50%;
 transform: translateY(-50%);
-font-size: 13px; color: #6B7280;
+font-size: 18px; color: #6B7280;
 pointer-events: none;
 }
 input[type=“number”] {
@@ -181,8 +181,8 @@ input[type=“number”]:focus {
 border-color: #52B788;
 box-shadow: 0 0 0 3px rgba(82,183,136,0.12);
 }
-.has-pre input { padding-left: 30px; }
-.has-suf input { padding-right: 36px; }
+.has-pre input { padding-left: 36px; }
+.has-suf input { padding-right: 42px; }
 
 .tog-group { display: flex; gap: 8px; }
 .tog-btn {
@@ -685,7 +685,7 @@ transition: all 0.18s;
 
   <div class="roi-card">
     <div class="roi-eyebrow">The Toolkit ROI — fixing even one leak pays for itself</div>
-    <div class="roi-row"><span class="roi-lbl">Cost of The Chaos Audit</span><span class="roi-val">$37</span></div>
+    <div class="roi-row"><span class="roi-lbl">Cost of The Chaos Audit</span><span class="roi-val">$27</span></div>
     <div class="roi-row"><span class="roi-lbl">Your smallest single leak</span><span class="roi-val" id="roiSmallest">$0</span></div>
     <div class="roi-row"><span class="roi-lbl">Return on toolkit investment</span><span class="roi-val big" id="roiPct">0%</span></div>
     <div class="roi-row"><span class="roi-lbl">Weeks to recover the $37</span><span class="roi-val" id="roiWeeks">—</span></div>
@@ -706,15 +706,15 @@ transition: all 0.18s;
   <div class="cta-block">
     <div class="cta-eyebrow">Your Next Step</div>
     <div class="cta-title">Find exactly where your <span id="ctaAmt">$0</span> is coming from</div>
-    <div class="cta-subtitle">The calculator shows the number. The Chaos Audit shows you which 3 things to fix first.</div>
+    <div class="cta-subtitle">The calculator shows the number. The 20-Minute Chaos Audit shows you exactly which 3 things to fix first.</div>
 
 ```
-<a class="btn-primary" href="https://olhaclarity.kit.com/products/the-chaos-audit" target="_blank">
-  Get The Chaos Audit — $37
+<a class="btn-primary" href="https://checkout.mailerlite.com/checkout/17949" target="_blank">
+  Get The 20-Minute Chaos Audit — $27
   <small>Fillable PDF · Instant access · 20 minutes</small>
 </a>
 
-<div class="urgency-line">Most business owners find their biggest leak in the first 20 minutes.</div>
+<div class="urgency-line">Most business owners identify their biggest leak within 20 minutes of starting.</div>
 
 <div class="cta-divider"><span>or</span></div>
 
@@ -724,7 +724,7 @@ transition: all 0.18s;
 </a>
 
 <div class="ladder-hint">
-  Already have the toolkit? <a onclick="window.open('https://tidycal.com/olhaclarityaudit/chaos-to-clarity-diagnostic-report-no-call','_blank')">→ Book the $97 Clarity Report</a>
+  Already have the audit? <a onclick="window.open('https://tidycal.com/olhaclarityaudit/chaos-to-clarity-diagnostic-report-no-call','_blank')">→ Book the $97 Clarity Report</a>
 </div>
 
 <div class="cta-guarantee">
@@ -828,9 +828,9 @@ transition: all 0.18s;
     const active = [l1,l2,l3,l4,l5].filter(l=>l>0);
     const smallest = active.length ? Math.min(...active) : 0;
     document.getElementById('roiSmallest').textContent = '$'+smallest.toLocaleString();
-    document.getElementById('roiPct').textContent = smallest>0 ? Math.round((smallest/37)*100)+'%' : '0%';
+    document.getElementById('roiPct').textContent = smallest>0 ? Math.round((smallest/27)*100)+'%' : '0%';
     const wkLeak = activeWeeks>0 ? total/activeWeeks : 0;
-    document.getElementById('roiWeeks').textContent = wkLeak>0 ? (37/wkLeak).toFixed(1)+' weeks' : '—';
+    document.getElementById('roiWeeks').textContent = wkLeak>0 ? (27/wkLeak).toFixed(1)+' weeks' : '—';
 
     const annualRev = weeklyRev * activeWeeks;
     const ratio = annualRev>0 ? total/annualRev : 0;
